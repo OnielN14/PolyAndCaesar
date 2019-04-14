@@ -13,14 +13,6 @@ public class main {
      */
     public static void main(String[] args) {
         
-        CaesarSubtitution caesarSubtitution = CaesarSubtitution.getInstance();
-        
-        caesarSubtitution.setKey(2);
-        String strEncrypted = caesarSubtitution.encode("Nama Saya");
-        String strDecrypted = caesarSubtitution.decode(strEncrypted);
-        
-        System.out.println("encrypted :" + strEncrypted);
-        System.out.println("decrypted :" + strDecrypted);
     }
     
 }
