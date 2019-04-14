@@ -11,6 +11,16 @@ public class Polyalphabetic extends CryptoAlgorithm{
     
     private ArrayList<PolyalphabeticKey> keys = new ArrayList<>();
 
+    private static Polyalphabetic instance = null;
+    
+    public static Polyalphabetic getInstance(){
+        if (instance == null) {
+            instance = new Polyalphabetic();
+        }
+        
+        return instance;
+    }
+    
     public ArrayList<PolyalphabeticKey> getKeys() {
         return keys;
     }
@@ -23,16 +33,33 @@ public class Polyalphabetic extends CryptoAlgorithm{
     @Override
     public String encode(Object str) {
         char[] strToChars = str.toString().toLowerCase().toCharArray();
-        for(int index = 0; index < strToChars.length; index++){
-            
+        for(int indexPlainText = 0; indexPlainText < strToChars.length; indexPlainText++){
+            for(int indexKeys = 0; indexKeys < this.keys.size(); indexKeys++){
+                for(CryptoTable item : this.encryptionTable(this.keys.get(indexKeys))){
+                    if (strToChars[indexPlainText] == item.getValue()) {
+                        strToChars[indexPlainText] = item.getKey();
+                        break;
+                    }
+                }
+            }
         }
-        return str.toString();
+        return new String(strToChars);
     }
 
     @Override
     public String decode(Object str) {
-        
-        return str.toString();
+        char[] strToChars = str.toString().toLowerCase().toCharArray();
+        for(int indexPlainText = 0; indexPlainText < strToChars.length; indexPlainText++){
+            for(int indexKeys = this.keys.size()-1; indexKeys >= 0; indexKeys--){
+                for(CryptoTable item : this.encryptionTable(this.keys.get(indexKeys))){
+                    if (strToChars[indexPlainText] == item.getKey()) {
+                        strToChars[indexPlainText] = item.getValue();
+                        break;
+                    }
+                }
+            }
+        }
+        return new String(strToChars);
     }
     
     public ArrayList<CryptoTable> encryptionTable(PolyalphabeticKey key){
