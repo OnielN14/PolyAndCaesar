@@ -26,6 +26,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     private javax.swing.JTextField[] keyTextFieldDecryptSection;
     private javax.swing.JLabel[] keyLabelDecryptSection;
     
+    
     /**
      * Creates new form Poly
      */
@@ -85,7 +86,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -115,16 +116,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(648, 500));
-        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
-
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane1.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
-            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
-                jScrollPane1MouseWheelMoved(evt);
-            }
-        });
-
-        jPanel1.setPreferredSize(new java.awt.Dimension(648, 602));
+        getContentPane().setLayout(new java.awt.GridLayout());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -285,7 +277,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(dek_chipertext_pol, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -362,7 +354,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dek_plaintext_pol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -428,12 +420,12 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
                         .addComponent(jLabel7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72))
+                .addGap(105, 105, 105))
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        jScrollPane2.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1);
+        getContentPane().add(jScrollPane2);
 
         pack();
         setLocationRelativeTo(null);
@@ -483,10 +475,6 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     private void dek_plaintext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_plaintext_polActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dek_plaintext_polActionPerformed
-
-    private void jScrollPane1MouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_jScrollPane1MouseWheelMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jScrollPane1MouseWheelMoved
 
     /**
      * @param args the command line arguments
@@ -553,6 +541,6 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

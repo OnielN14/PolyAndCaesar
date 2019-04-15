@@ -77,7 +77,7 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(namaAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 900, 50));
 
         btn_poly_dinamis.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btn_poly_dinamis.setForeground(new java.awt.Color(255, 255, 255));
+        btn_poly_dinamis.setForeground(new java.awt.Color(26, 188, 156));
         btn_poly_dinamis.setText("POLYALPHABETICAL");
         btn_poly_dinamis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,7 +93,7 @@ public class home extends javax.swing.JFrame {
 
         btn_caesar.setBackground(new java.awt.Color(255, 255, 255));
         btn_caesar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btn_caesar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_caesar.setForeground(new java.awt.Color(26, 188, 156));
         btn_caesar.setText("CAESAR");
         btn_caesar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -108,7 +108,7 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(btn_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 50));
 
         btn_poly.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btn_poly.setForeground(new java.awt.Color(255, 255, 255));
+        btn_poly.setForeground(new java.awt.Color(26, 188, 156));
         btn_poly.setText("POLYALPHABETICAL DINAMIS");
         btn_poly.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
