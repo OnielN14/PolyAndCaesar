@@ -2,7 +2,7 @@
 Polyalphabetic and Caesar Technique in Cryptography. This project was initialized for research purposes and to fulfill an assignment in Information System Security Subject.
 
 ## Usage
-You can merge this project with your own project or just download the JAR file from the **Release** tab and add it to your library list.
+You can merge this project with your own project or just download the JAR file from the **Release** tab ([here](https://github.com/OnielN14/PolyAndCaesar/releases)) and add it to your library list.
 Don't forget to import the class first when you want to use it.
 
 1. Polyalphabetic
