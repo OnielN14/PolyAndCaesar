@@ -21,6 +21,7 @@ public class Polyalphabetic_normal extends javax.swing.JFrame {
     public Polyalphabetic_normal() {
         this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(Polyalphabetic_normal.DISPOSE_ON_CLOSE);
     }
 
     /**

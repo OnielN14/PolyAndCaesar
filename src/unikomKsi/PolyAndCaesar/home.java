@@ -11,6 +11,7 @@ import java.awt.Toolkit;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Caesar;
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic_key;
 import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic_normal;
 
 /**
@@ -204,6 +205,7 @@ public class home extends javax.swing.JFrame {
 
     private void btn_polyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_polyActionPerformed
         // TODO add your handling code here:
+        new Polyalphabetic_key().show();
     }//GEN-LAST:event_btn_polyActionPerformed
 
     private void btn_caesarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_caesarMouseClicked

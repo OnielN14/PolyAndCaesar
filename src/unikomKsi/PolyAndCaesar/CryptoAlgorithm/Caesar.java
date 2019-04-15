@@ -17,6 +17,7 @@ public class Caesar extends javax.swing.JFrame {
     public Caesar() {
         this.setResizable(false);
         initComponents();
+        setDefaultCloseOperation(Caesar.DISPOSE_ON_CLOSE);
     }
 
     /**
