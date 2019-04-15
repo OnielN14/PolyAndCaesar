@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unikomKsi.PolyAndCaesar.CryptoAlgorithm;
+package unikomKsi.PolyAndCaesar.view;
 
 /**
  *
@@ -33,13 +33,12 @@ public class Polyalphabetic_key extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jml_kunci = new javax.swing.JComboBox<>();
+        jml_kunci = new javax.swing.JComboBox<String>();
         jLabel3 = new javax.swing.JLabel();
         btn_proses_awal_dinamis = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(452, 186));
-        setPreferredSize(new java.awt.Dimension(452, 200));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(26, 188, 156));
@@ -68,7 +67,7 @@ public class Polyalphabetic_key extends javax.swing.JFrame {
         jLabel2.setText("*Jumlah 1 sampai 10");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 120, 20));
 
-        jml_kunci.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jml_kunci.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jml_kunci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jml_kunciActionPerformed(evt);

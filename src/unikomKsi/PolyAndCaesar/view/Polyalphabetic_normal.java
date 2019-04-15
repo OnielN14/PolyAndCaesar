@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unikomKsi.PolyAndCaesar.CryptoAlgorithm;
+package unikomKsi.PolyAndCaesar.view;
 
 import java.util.ArrayList;
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic;
 import unikomKsi.PolyAndCaesar.CryptoAlgorithm.model.PolyalphabeticKey;
 
 /**

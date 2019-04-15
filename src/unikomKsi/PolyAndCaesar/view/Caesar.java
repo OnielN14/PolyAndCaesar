@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unikomKsi.PolyAndCaesar.CryptoAlgorithm;
+package unikomKsi.PolyAndCaesar.view;
+
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.CaesarSubtitution;
+
 /**
  *
  * @author yudha
@@ -50,7 +53,6 @@ public class Caesar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(648, 500));
-        setPreferredSize(new java.awt.Dimension(648, 570));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(26, 188, 156));

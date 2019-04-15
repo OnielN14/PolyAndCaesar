@@ -10,9 +10,9 @@ import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import java.awt.Toolkit;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Caesar;
-import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic_key;
-import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic_normal;
+import unikomKsi.PolyAndCaesar.view.Caesar;
+import unikomKsi.PolyAndCaesar.view.Polyalphabetic_key;
+import unikomKsi.PolyAndCaesar.view.Polyalphabetic_normal;
 
 /**
  *

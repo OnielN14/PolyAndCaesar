@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package unikomKsi.PolyAndCaesar.CryptoAlgorithm;
+package unikomKsi.PolyAndCaesar.view;
 
 import java.awt.GridLayout;
 import java.util.ArrayList;
@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic;
 import unikomKsi.PolyAndCaesar.CryptoAlgorithm.model.PolyalphabeticKey;
 
 /**
@@ -19,14 +20,14 @@ import unikomKsi.PolyAndCaesar.CryptoAlgorithm.model.PolyalphabeticKey;
  * @author yudha
  */
 public class Polyalphabetic_dinamis extends javax.swing.JFrame {
-    private javax.swing.JTextField[] text1;
-    private javax.swing.JLabel[] textL;
+    private javax.swing.JTextField[] keyTextFieldEncryptSection;
+    private javax.swing.JLabel[] keyLabelEncryptSection;
     
-    private javax.swing.JTextField[] text2;
-    private javax.swing.JLabel[] textL2;
+    private javax.swing.JTextField[] keyTextFieldDecryptSection;
+    private javax.swing.JLabel[] keyLabelDecryptSection;
     
     /**
-     * Creates new form Caesar
+     * Creates new form Poly
      */
     public Polyalphabetic_dinamis(String jmlKey) {
         this.setResizable(false);
@@ -34,53 +35,43 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
         setDefaultCloseOperation(Polyalphabetic_dinamis.DISPOSE_ON_CLOSE);
         addTextfield(jmlKey);
     }
-
-    Polyalphabetic_dinamis(Polyalphabetic_key aThis, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     private void addTextfield(String nilai){
-        int i = Integer.parseInt(nilai);
-        int a = 0;
+        int fieldAmount = Integer.parseInt(nilai);
         
-        text1 = new JTextField[10];
-        textL = new JLabel[10];
+        jPanel2.setLayout(new GridLayout(0,1,30,15));
+        jPanel5.setLayout(new GridLayout(0,1,150,15));
+        jPanel10.setLayout(new GridLayout(0,1,150,15));
+        jPanel11.setLayout(new GridLayout(0,1,30,15));
         
-        text2 = new JTextField[10];
-        textL2 = new JLabel[10];
-        
-        JLabel label[] = new JLabel[Integer.parseInt(nilai)];
-        JTextField field[] = new JTextField[Integer.parseInt(nilai)];
-        
-        for (i = 0; i < field.length; i++) {
-            jPanel2.setLayout(new GridLayout(0,1,30,15));
-            jPanel5.setLayout(new GridLayout(0,1,150,15));
+        keyTextFieldEncryptSection = new JTextField[fieldAmount];
+        keyLabelEncryptSection = new JLabel[fieldAmount];
+        keyTextFieldDecryptSection = new JTextField[fieldAmount];
+        keyLabelDecryptSection = new JLabel[fieldAmount];
+                
+        for (int iterator = 0; iterator < fieldAmount; iterator++) {            
+            int indexNumber = iterator+1;
+            keyLabelEncryptSection[iterator] = new javax.swing.JLabel("KUNCI "+indexNumber);
+            keyTextFieldEncryptSection[iterator] = new javax.swing.JTextField(Integer.parseInt(nilai)); 
             
-            jPanel10.setLayout(new GridLayout(0,1,150,15));
-            jPanel11.setLayout(new GridLayout(0,1,30,15));
+            keyLabelDecryptSection[iterator] = new javax.swing.JLabel("KUNCI "+indexNumber);
+            keyTextFieldDecryptSection[iterator] = new javax.swing.JTextField(Integer.parseInt(nilai));
             
-            int b = i+1;
-            textL[i] = new javax.swing.JLabel("KUNCI "+b);
-            text1[i] = new javax.swing.JTextField(Integer.parseInt(nilai)); 
+            jPanel2.add(keyTextFieldEncryptSection[iterator]);
+            jPanel5.add(keyLabelEncryptSection[iterator]);
             
-            textL2[i] = new javax.swing.JLabel("KUNCI "+b);
-            text2[i] = new javax.swing.JTextField(Integer.parseInt(nilai));
-            
-            jPanel2.add(text1[i]);
-            jPanel5.add(textL[i]);
-            
-            jPanel10.add(textL2[i]);
-            jPanel11.add(text2[i]);
-            
-            jPanel2.revalidate();
-            jPanel2.repaint();
-            jPanel5.revalidate();
-            jPanel5.repaint();
-            jPanel10.revalidate();
-            jPanel10.repaint();
-            jPanel11.revalidate();
-            jPanel11.repaint();
+            jPanel10.add(keyLabelDecryptSection[iterator]);
+            jPanel11.add(keyTextFieldDecryptSection[iterator]);
         }
+        
+        jPanel2.revalidate();
+        jPanel2.repaint();
+        jPanel5.revalidate();
+        jPanel5.repaint();
+        jPanel10.revalidate();
+        jPanel10.repaint();
+        jPanel11.revalidate();
+        jPanel11.repaint();
     }
         
     
@@ -124,7 +115,7 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(648, 500));
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
@@ -451,15 +442,15 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Polyalphabetic polyalphabetic = Polyalphabetic.getInstance();
         String enk_plaintext = enk_plaintext_pol.getText();
-//        String enk_kunci = text1.getText();
         
         ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
-        keyList.add(new PolyalphabeticKey(0, i));
-        keyList.add(new PolyalphabeticKey(1, enk_kunci));
+        for (int i = 0; i < this.keyTextFieldEncryptSection.length; i++) {
+            keyList.add(new PolyalphabeticKey(i, this.keyTextFieldEncryptSection[i].getText()));
+        }
         
         polyalphabetic.setKeys(keyList);
         
-        enk_chipertext_caesar.setText(polyalphabetic.encode(enk_plaintext).toUpperCase());
+        enk_chipertext_pol.setText(polyalphabetic.encode(enk_plaintext).toUpperCase());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void enk_plaintext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_plaintext_polActionPerformed
@@ -475,7 +466,18 @@ public class Polyalphabetic_dinamis extends javax.swing.JFrame {
     }//GEN-LAST:event_dek_chipertext_polActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Polyalphabetic polyalphabetic = Polyalphabetic.getInstance();
+        String dek_ciphertext = dek_chipertext_pol.getText();
+        
+        ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
+        for (int i = 0; i < this.keyTextFieldDecryptSection.length; i++) {
+            keyList.add(new PolyalphabeticKey(i, this.keyTextFieldDecryptSection[i].getText()));
+        }
+        
+        polyalphabetic.setKeys(keyList);
+        
+        dek_plaintext_pol.setText(polyalphabetic.decode(dek_ciphertext).toUpperCase());
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void dek_plaintext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_plaintext_polActionPerformed
