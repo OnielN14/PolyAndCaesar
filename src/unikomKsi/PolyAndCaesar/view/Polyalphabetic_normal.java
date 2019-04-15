@@ -207,7 +207,6 @@ public class Polyalphabetic_normal extends javax.swing.JFrame {
         
         ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
         keyList.add(new PolyalphabeticKey(0, enk_kunci));
-        keyList.add(new PolyalphabeticKey(1, enk_kunci));
         
         polyalphabetic.setKeys(keyList);
         
@@ -234,7 +233,6 @@ public class Polyalphabetic_normal extends javax.swing.JFrame {
         
         ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
         keyList.add(new PolyalphabeticKey(0, dek_kunci));
-        keyList.add(new PolyalphabeticKey(1, dek_kunci));
         
         polyalphabetic.setKeys(keyList);
         
