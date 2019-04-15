@@ -4,17 +4,21 @@
  * and open the template in the editor.
  */
 package unikomKsi.PolyAndCaesar.CryptoAlgorithm;
+
+import java.util.ArrayList;
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.model.PolyalphabeticKey;
+
 /**
  *
  * @author yudha
  */
-public class Caesar extends javax.swing.JFrame {
+public class Polyalphabetic_normal extends javax.swing.JFrame {
     
     
     /**
      * Creates new form Caesar
      */
-    public Caesar() {
+    public Polyalphabetic_normal() {
         this.setResizable(false);
         initComponents();
     }
@@ -31,25 +35,25 @@ public class Caesar extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        enk_plaintext_caesar = new javax.swing.JTextField();
+        enk_plaintext_pol = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        enk_kunci_caesar = new javax.swing.JTextField();
-        enk_proses_caesar = new javax.swing.JButton();
+        enk_kunci_pol = new javax.swing.JTextField();
+        enk_proses_pol = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        enk_chipertext_caesar = new javax.swing.JTextField();
+        enk_chipertext_pol = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        dek_chipertext_caesar = new javax.swing.JTextField();
+        dek_chipertext_pol = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        dek_kunci_caesar = new javax.swing.JTextField();
-        dek_proses_caesar = new javax.swing.JButton();
+        dek_kunci_pol = new javax.swing.JTextField();
+        dek_proses_pol = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        dek_plaintext_caesar = new javax.swing.JTextField();
+        dek_plaintext_pol = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(648, 500));
-        setPreferredSize(new java.awt.Dimension(648, 570));
+        setPreferredSize(new java.awt.Dimension(650, 570));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(26, 188, 156));
@@ -58,7 +62,7 @@ public class Caesar extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("ENKRIPSI TEKNIK SUBTITUSI");
+        jLabel5.setText("ENKRIPSI TEKNIK  POLYALPHABETICAL");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -79,49 +83,49 @@ public class Caesar extends javax.swing.JFrame {
         jLabel2.setText("PLAIN TEKS");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 20));
 
-        enk_plaintext_caesar.addActionListener(new java.awt.event.ActionListener() {
+        enk_plaintext_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enk_plaintext_caesarActionPerformed(evt);
+                enk_plaintext_polActionPerformed(evt);
             }
         });
-        getContentPane().add(enk_plaintext_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 390, -1));
+        getContentPane().add(enk_plaintext_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 390, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel3.setText("PERGESERAN KUNCI");
+        jLabel3.setText("KUNCI 1");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, 20));
 
-        enk_kunci_caesar.addActionListener(new java.awt.event.ActionListener() {
+        enk_kunci_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enk_kunci_caesarActionPerformed(evt);
+                enk_kunci_polActionPerformed(evt);
             }
         });
-        getContentPane().add(enk_kunci_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 90, -1));
+        getContentPane().add(enk_kunci_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 90, -1));
 
-        enk_proses_caesar.setText("PROSES");
-        enk_proses_caesar.addActionListener(new java.awt.event.ActionListener() {
+        enk_proses_pol.setText("PROSES");
+        enk_proses_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enk_proses_caesarActionPerformed(evt);
+                enk_proses_polActionPerformed(evt);
             }
         });
-        getContentPane().add(enk_proses_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+        getContentPane().add(enk_proses_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel4.setText("CHIPER TEKS");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, 20));
 
-        enk_chipertext_caesar.addActionListener(new java.awt.event.ActionListener() {
+        enk_chipertext_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enk_chipertext_caesarActionPerformed(evt);
+                enk_chipertext_polActionPerformed(evt);
             }
         });
-        getContentPane().add(enk_chipertext_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 390, -1));
+        getContentPane().add(enk_chipertext_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 390, -1));
 
         jPanel2.setBackground(new java.awt.Color(26, 188, 156));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("DEKRIPSI TEKNIK SUBTITUSI");
+        jLabel1.setText("DEKRIPSI TEKNIK POLYALPHABETICAL");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -144,92 +148,100 @@ public class Caesar extends javax.swing.JFrame {
         jLabel6.setText("CHIPER TEKS");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, 20));
 
-        dek_chipertext_caesar.addActionListener(new java.awt.event.ActionListener() {
+        dek_chipertext_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dek_chipertext_caesarActionPerformed(evt);
+                dek_chipertext_polActionPerformed(evt);
             }
         });
-        getContentPane().add(dek_chipertext_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 390, -1));
+        getContentPane().add(dek_chipertext_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 390, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel7.setText("PERGESERAN KUNCI");
+        jLabel7.setText("KUNCI 1");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, 20));
 
-        dek_kunci_caesar.addActionListener(new java.awt.event.ActionListener() {
+        dek_kunci_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dek_kunci_caesarActionPerformed(evt);
+                dek_kunci_polActionPerformed(evt);
             }
         });
-        getContentPane().add(dek_kunci_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 90, -1));
+        getContentPane().add(dek_kunci_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 90, -1));
 
-        dek_proses_caesar.setText("PROSES");
-        dek_proses_caesar.addActionListener(new java.awt.event.ActionListener() {
+        dek_proses_pol.setText("PROSES");
+        dek_proses_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dek_proses_caesarActionPerformed(evt);
+                dek_proses_polActionPerformed(evt);
             }
         });
-        getContentPane().add(dek_proses_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, -1, -1));
+        getContentPane().add(dek_proses_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 440, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel8.setText("PLAIN TEKS");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 480, -1, 20));
 
-        dek_plaintext_caesar.addActionListener(new java.awt.event.ActionListener() {
+        dek_plaintext_pol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dek_plaintext_caesarActionPerformed(evt);
+                dek_plaintext_polActionPerformed(evt);
             }
         });
-        getContentPane().add(dek_plaintext_caesar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 390, -1));
+        getContentPane().add(dek_plaintext_pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 480, 390, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void enk_plaintext_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_plaintext_caesarActionPerformed
+    private void enk_plaintext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_plaintext_polActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_enk_plaintext_caesarActionPerformed
+    }//GEN-LAST:event_enk_plaintext_polActionPerformed
 
-    private void enk_kunci_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_kunci_caesarActionPerformed
+    private void enk_kunci_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_kunci_polActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_enk_kunci_caesarActionPerformed
+    }//GEN-LAST:event_enk_kunci_polActionPerformed
 
-    private void enk_proses_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_proses_caesarActionPerformed
+    private void enk_proses_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_proses_polActionPerformed
         // TODO add your handling code here:        
-        CaesarSubtitution caesarSubtitution = CaesarSubtitution.getInstance();
-        String enk_plaintext = enk_plaintext_caesar.getText();
-        String enk_kunci = enk_kunci_caesar.getText();
+        Polyalphabetic polyalphabetic = Polyalphabetic.getInstance();
+        String enk_plaintext = enk_plaintext_pol.getText();
+        String enk_kunci = enk_kunci_pol.getText();
         
-        caesarSubtitution.setKey(Integer.parseInt(enk_kunci));
+        ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
+        keyList.add(new PolyalphabeticKey(0, enk_kunci));
+        keyList.add(new PolyalphabeticKey(1, enk_kunci));
         
-        enk_chipertext_caesar.setText(caesarSubtitution.decode(enk_plaintext).toUpperCase());
-    }//GEN-LAST:event_enk_proses_caesarActionPerformed
-
-    private void enk_chipertext_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_chipertext_caesarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enk_chipertext_caesarActionPerformed
-
-    private void dek_chipertext_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_chipertext_caesarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dek_chipertext_caesarActionPerformed
-
-    private void dek_kunci_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_kunci_caesarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dek_kunci_caesarActionPerformed
-
-    private void dek_proses_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_proses_caesarActionPerformed
-        // TODO add your handling code here:
-        CaesarSubtitution caesarSubtitution = CaesarSubtitution.getInstance();
-        String dek_chipertext = dek_chipertext_caesar.getText();
-        String dek_kunci = dek_kunci_caesar.getText();
+        polyalphabetic.setKeys(keyList);
         
-        caesarSubtitution.setKey(Integer.parseInt(dek_kunci));
-        
-        dek_plaintext_caesar.setText(caesarSubtitution.encode(dek_chipertext).toUpperCase());
-    }//GEN-LAST:event_dek_proses_caesarActionPerformed
+        enk_chipertext_pol.setText(polyalphabetic.encode(enk_plaintext).toUpperCase());
+    }//GEN-LAST:event_enk_proses_polActionPerformed
 
-    private void dek_plaintext_caesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_plaintext_caesarActionPerformed
+    private void enk_chipertext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enk_chipertext_polActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dek_plaintext_caesarActionPerformed
+    }//GEN-LAST:event_enk_chipertext_polActionPerformed
+
+    private void dek_chipertext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_chipertext_polActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dek_chipertext_polActionPerformed
+
+    private void dek_kunci_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_kunci_polActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dek_kunci_polActionPerformed
+
+    private void dek_proses_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_proses_polActionPerformed
+        // TODO add your handling code here:
+        Polyalphabetic polyalphabetic = Polyalphabetic.getInstance();
+        String dek_chiper = dek_chipertext_pol.getText();
+        String dek_kunci = dek_kunci_pol.getText();
+        
+        ArrayList<PolyalphabeticKey> keyList = new ArrayList<>();
+        keyList.add(new PolyalphabeticKey(0, dek_kunci));
+        keyList.add(new PolyalphabeticKey(1, dek_kunci));
+        
+        polyalphabetic.setKeys(keyList);
+        
+        dek_plaintext_pol.setText(polyalphabetic.decode(dek_chiper).toUpperCase());
+    }//GEN-LAST:event_dek_proses_polActionPerformed
+
+    private void dek_plaintext_polActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dek_plaintext_polActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dek_plaintext_polActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,33 +260,34 @@ public class Caesar extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Caesar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Polyalphabetic_normal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Caesar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Polyalphabetic_normal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Caesar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Polyalphabetic_normal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Caesar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Polyalphabetic_normal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Caesar().setVisible(true);
+                new Polyalphabetic_normal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField dek_chipertext_caesar;
-    private javax.swing.JTextField dek_kunci_caesar;
-    private javax.swing.JTextField dek_plaintext_caesar;
-    private javax.swing.JButton dek_proses_caesar;
-    private javax.swing.JTextField enk_chipertext_caesar;
-    private javax.swing.JTextField enk_kunci_caesar;
-    private javax.swing.JTextField enk_plaintext_caesar;
-    private javax.swing.JButton enk_proses_caesar;
+    private javax.swing.JTextField dek_chipertext_pol;
+    private javax.swing.JTextField dek_kunci_pol;
+    private javax.swing.JTextField dek_plaintext_pol;
+    private javax.swing.JButton dek_proses_pol;
+    private javax.swing.JTextField enk_chipertext_pol;
+    private javax.swing.JTextField enk_kunci_pol;
+    private javax.swing.JTextField enk_plaintext_pol;
+    private javax.swing.JButton enk_proses_pol;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

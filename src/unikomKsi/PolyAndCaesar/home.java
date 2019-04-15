@@ -11,6 +11,7 @@ import java.awt.Toolkit;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Caesar;
+import unikomKsi.PolyAndCaesar.CryptoAlgorithm.Polyalphabetic_normal;
 
 /**
  *
@@ -76,7 +77,12 @@ public class home extends javax.swing.JFrame {
 
         btn_poly_dinamis.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btn_poly_dinamis.setForeground(new java.awt.Color(255, 255, 255));
-        btn_poly_dinamis.setText("POLYALPHABETICAL DINAMIS");
+        btn_poly_dinamis.setText("POLYALPHABETICAL");
+        btn_poly_dinamis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_poly_dinamisMouseClicked(evt);
+            }
+        });
         btn_poly_dinamis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_poly_dinamisActionPerformed(evt);
@@ -102,7 +108,7 @@ public class home extends javax.swing.JFrame {
 
         btn_poly.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         btn_poly.setForeground(new java.awt.Color(255, 255, 255));
-        btn_poly.setText("POLYALPHABETICAL");
+        btn_poly.setText("POLYALPHABETICAL DINAMIS");
         btn_poly.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_polyActionPerformed(evt);
@@ -204,6 +210,11 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         new Caesar().show();
     }//GEN-LAST:event_btn_caesarMouseClicked
+
+    private void btn_poly_dinamisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_poly_dinamisMouseClicked
+        // TODO add your handling code here:
+        new Polyalphabetic_normal().show();
+    }//GEN-LAST:event_btn_poly_dinamisMouseClicked
 
     /**
      * @param args the command line arguments
