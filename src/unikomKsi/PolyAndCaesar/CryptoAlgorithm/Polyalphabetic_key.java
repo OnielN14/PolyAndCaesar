@@ -100,8 +100,8 @@ public class Polyalphabetic_key extends javax.swing.JFrame {
     private void btn_proses_awal_dinamisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_proses_awal_dinamisActionPerformed
         // TODO add your handling code here:
         jml_nilai_key = (String)jml_kunci.getSelectedItem();
-//        Polyalphabetic_dinamis send = new Polyalphabetic_dinamis(jml_nilai_key);
-        tes send = new tes(jml_nilai_key);
+        Polyalphabetic_dinamis send = new Polyalphabetic_dinamis(jml_nilai_key);
+//        tes send = new tes(jml_nilai_key);
         this.setVisible(false);
         send.setVisible(true);
     }//GEN-LAST:event_btn_proses_awal_dinamisActionPerformed
