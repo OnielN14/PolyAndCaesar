@@ -49,10 +49,10 @@ class SimpleClass{
 
         // 3. Call the encode or decode method
         // 3.a. encode 
-        System.out.println(polyalphabetic.encode("Everyone is Amazing"));
+        System.out.println(caesarSubtitution.encode("Everyone is Amazing"));
 
         // 3.b. decode 
-        System.out.println(polyalphabetic.decode("ctcpwmlc gq ykyxgle"));
+        System.out.println(caesarSubtitution.decode("ctcpwmlc gq ykyxgle"));
     }
 
 }
