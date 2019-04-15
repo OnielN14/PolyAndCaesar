@@ -54,7 +54,8 @@ public class Polyalphabetic_normal extends javax.swing.JFrame {
         dek_plaintext_caesar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(648, 500));
+        setMinimumSize(new java.awt.Dimension(648, 582));
+        setPreferredSize(new java.awt.Dimension(648, 582));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(26, 188, 156));
